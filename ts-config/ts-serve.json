@@ -1,0 +1,19 @@
+{
+    "TCP": {
+      "443": {
+        "HTTPS": true
+      }
+    },
+    "Web": {
+      "dns.raptor-rigel.ts.net:443": {
+        "Handlers": {
+          "/": {
+            "Proxy": "http://127.0.0.1:80"
+          }
+        }
+      }
+    },
+    "AllowFunnel": {
+      "dns.raptor-rigel.ts.net:443": false
+    }
+  }
