@@ -13,7 +13,7 @@ services:
       - sys_module
     restart: unless-stopped
     volumes:
-      - /workspaces/personal-dns/ts-config:/config
+      - ${LOCAL_PATH}/ts-config:/config
   adguard_home:
     image: adguard/adguardhome:latest
     restart: unless-stopped
@@ -21,4 +21,4 @@ services:
     depends_on: 
       - ts-proxy
     volumes:
-      - /workspaces/personal-dns/adguard-home/conf:/opt/adguardhome/conf
+      - ${LOCAL_PATH}/adguard-home/conf:/opt/adguardhome/conf
