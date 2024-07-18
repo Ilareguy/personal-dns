@@ -23,7 +23,7 @@ dns:
   ratelimit_whitelist: []
   refuse_any: true
   upstream_dns:
-    - https://dns10.quad9.net/dns-query
+    - https://0ms.dev/dns-query
   upstream_dns_file: ""
   bootstrap_dns:
     - 9.9.9.10
@@ -86,14 +86,14 @@ tls:
 querylog:
   dir_path: ""
   ignored: []
-  interval: 2160h
+  interval: 24h
   size_memory: 1000
   enabled: true
   file_enabled: true
 statistics:
   dir_path: ""
   ignored: []
-  interval: 720h
+  interval: 2160h
   enabled: true
 filters:
   - enabled: true
@@ -105,7 +105,8 @@ filters:
     name: AdAway Default Blocklist
     id: 2
 whitelist_filters: []
-user_rules: []
+user_rules:
+  - '||8chan.moe^'
 dhcp:
   enabled: false
   interface_name: ""
@@ -129,7 +130,12 @@ filtering:
   blocked_services:
     schedule:
       time_zone: UTC
-    ids: []
+    ids:
+      - 4chan
+      - zhihu
+      - tiktok
+      - qq
+      - onlyfans
   protection_disabled_until: null
   safe_search:
     enabled: false
